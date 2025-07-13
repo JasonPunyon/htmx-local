@@ -1,0 +1,39 @@
+{
+  "name": "htmx-local",
+  "private": true,
+  "version": "0.2.0",
+  "main": "./dist/htmx-local.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/htmx-local.js",
+      "browser": "./dist/htmx-local.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "rm -r dist; rspack build; npm pack",
+    "dev": "rspack dev",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "preview": "rspack preview"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "@rspack/cli": "^1.3.15",
+    "@rspack/core": "^1.3.15",
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.842.0",
+    "@sqlite.org/sqlite-wasm": "^3.50.1-build1",
+    "htmx.org": "^2.0.4",
+    "mustache": "^4.2.0",
+    "rxjs": "^7.8.2",
+    "tiny-request-router": "^1.2.2"
+  }
+}
