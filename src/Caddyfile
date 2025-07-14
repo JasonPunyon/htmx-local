@@ -1,0 +1,5 @@
+:3000 {
+	encode
+	try_files {path} /index.html
+	file_server
+}

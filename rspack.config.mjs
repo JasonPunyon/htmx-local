@@ -32,7 +32,15 @@ export default defineConfig({
 			}
 		]
 	},
-	plugins: [],
+	plugins: [
+		new rspack.HtmlRspackPlugin({
+			template: "src/index.html",
+			inject: false
+		}),
+		new rspack.CopyRspackPlugin({
+			patterns: [{ from: 'src/Caddyfile' }],
+		}),
+	],
 	optimization: {
 		minimizer: [
 			new rspack.SwcJsMinimizerRspackPlugin(),
