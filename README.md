@@ -23,3 +23,7 @@ Here's a quick hello world.
 ```
 
 First we add a script tag to load htmx-local. Then in the next script tag we pull out the router from htmx, and set it up to respond to GET requests to `/` with "Hello, world!". Finally we add the body tag with attributes hx-get='/' and hx-trigger="load". This means "when the page loads, do a GET to '/' and put the results in the body tag". With htmx-local, that GET '/' will run against the router, and the page will display "Hello, world!".
+
+## getting started
+
+download a release. unzip it somewhere tasteful. cd into the dist directory. get [caddy](https://caddyserver.com). `caddy run --watch`.
